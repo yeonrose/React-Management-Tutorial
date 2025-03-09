@@ -10,12 +10,12 @@ import TableCell from "@mui/material/TableCell";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 
-const theme = createTheme(); // MUI v5 테마 생성
+const theme = createTheme(); 
 
 const useStyles = makeStyles(() => ({
   root: {
     width: "100%",
-    marginTop: theme.spacing(3), // theme.spacing.unit * 3 → theme.spacing(3) 변경
+    marginTop: theme.spacing(3), 
     overflowX: "auto",
   },
   table: {
@@ -51,7 +51,7 @@ const customers = [
 ];
 
 function App() {
-  const classes = useStyles(); // 스타일 적용
+  const classes = useStyles(); 
 
   return (
     <ThemeProvider theme={theme}>
