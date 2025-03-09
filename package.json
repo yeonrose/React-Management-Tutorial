@@ -7,8 +7,9 @@
         "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
     },
     "dependencies": {
-        "body-parser": "^1.18.3",
+        "body-parser": "^1.20.3",
         "express": "^4.16.4",
+        "multer": "^1.4.5-lts.1",
         "pg": "^8.13.3",
         "postgresql": "^0.0.1"
     },
