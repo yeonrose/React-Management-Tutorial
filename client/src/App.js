@@ -39,13 +39,16 @@ class App extends Component{
   componentDidMount(){
     this.timer = setInterval(this.progress, 20);
     this.callApi()
-    .then(res => this.setState({customers: res}))
+    .then(res => {
+      this.setState({ customers: res.rows }); // ✅ customers 상태 업데이트
+  })
     .catch(err => console.log(err));
   }
 
   callApi = async () =>{
     const response = await fetch('/api/customers');
     const body = await response.json();
+
     return body;
   }
 
